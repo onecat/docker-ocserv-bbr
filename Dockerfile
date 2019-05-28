@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos
 MAINTAINER imcat
 
 COPY run /usr/local/bin/*
@@ -23,4 +23,4 @@ RUN mkdir -p /temp && cd /temp \
     && make && make install \
     && cd / && rm -rf /temp
 
-CMD ["run"]
+CMD ["/usr/local/bin/run"]
